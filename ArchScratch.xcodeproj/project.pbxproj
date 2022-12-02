@@ -17,17 +17,6 @@
 		0A7198F02939FE6900645643 /* ArchScratchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198EF2939FE6900645643 /* ArchScratchTests.swift */; };
 		0A7198FA2939FE6900645643 /* ArchScratchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198F92939FE6900645643 /* ArchScratchUITests.swift */; };
 		0A7198FC2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198FB2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift */; };
-		0A7199092939FEF000645643 /* Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7199082939FEF000645643 /* Safe.swift */; };
-		0A71990B2939FEFE00645643 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71990A2939FEFE00645643 /* Store.swift */; };
-		0A71990D2939FF0900645643 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71990C2939FF0900645643 /* Backend.swift */; };
-		0A71990F2939FF2100645643 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71990E2939FF2100645643 /* Command.swift */; };
-		0A7199132939FF3800645643 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7199122939FF3800645643 /* Result.swift */; };
-		0A7199152939FF5100645643 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7199142939FF5100645643 /* Event.swift */; };
-		0A7199172939FF5800645643 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7199162939FF5800645643 /* Record.swift */; };
-		0A7199192939FF6E00645643 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7199182939FF6E00645643 /* Queue.swift */; };
-		0A71991B2939FF8900645643 /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71991A2939FF8900645643 /* Clock.swift */; };
-		0A71991D293A066E00645643 /* Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71991C293A066E00645643 /* Object.swift */; };
-		0A71991F293A1C9100645643 /* Medium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71991E293A1C9100645643 /* Medium.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,17 +51,6 @@
 		0A7198F52939FE6900645643 /* ArchScratchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchScratchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7198F92939FE6900645643 /* ArchScratchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchScratchUITests.swift; sourceTree = "<group>"; };
 		0A7198FB2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchScratchUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		0A7199082939FEF000645643 /* Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Safe.swift; sourceTree = "<group>"; };
-		0A71990A2939FEFE00645643 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
-		0A71990C2939FF0900645643 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
-		0A71990E2939FF2100645643 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		0A7199122939FF3800645643 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		0A7199142939FF5100645643 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		0A7199162939FF5800645643 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
-		0A7199182939FF6E00645643 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
-		0A71991A2939FF8900645643 /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
-		0A71991C293A066E00645643 /* Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Object.swift; sourceTree = "<group>"; };
-		0A71991E293A1C9100645643 /* Medium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medium.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,17 +104,6 @@
 				0A7198D52939FE6900645643 /* AppDelegate.swift */,
 				0A7198D72939FE6900645643 /* SceneDelegate.swift */,
 				0A7198D92939FE6900645643 /* ViewController.swift */,
-				0A7199082939FEF000645643 /* Safe.swift */,
-				0A71991C293A066E00645643 /* Object.swift */,
-				0A7199162939FF5800645643 /* Record.swift */,
-				0A71990A2939FEFE00645643 /* Store.swift */,
-				0A71990E2939FF2100645643 /* Command.swift */,
-				0A7199122939FF3800645643 /* Result.swift */,
-				0A71990C2939FF0900645643 /* Backend.swift */,
-				0A7199182939FF6E00645643 /* Queue.swift */,
-				0A7199142939FF5100645643 /* Event.swift */,
-				0A71991A2939FF8900645643 /* Clock.swift */,
-				0A71991E293A1C9100645643 /* Medium.swift */,
 				0A7198DB2939FE6900645643 /* Main.storyboard */,
 				0A7198E12939FE6900645643 /* Assets.xcassets */,
 				0A7198E32939FE6900645643 /* LaunchScreen.storyboard */,
@@ -294,21 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A7199132939FF3800645643 /* Result.swift in Sources */,
 				0A7198DA2939FE6900645643 /* ViewController.swift in Sources */,
 				0A7198D62939FE6900645643 /* AppDelegate.swift in Sources */,
 				0A7198E02939FE6900645643 /* ArchScratch.xcdatamodeld in Sources */,
-				0A7199152939FF5100645643 /* Event.swift in Sources */,
-				0A71991B2939FF8900645643 /* Clock.swift in Sources */,
-				0A71990B2939FEFE00645643 /* Store.swift in Sources */,
-				0A7199172939FF5800645643 /* Record.swift in Sources */,
-				0A7199192939FF6E00645643 /* Queue.swift in Sources */,
-				0A71991F293A1C9100645643 /* Medium.swift in Sources */,
-				0A7199092939FEF000645643 /* Safe.swift in Sources */,
-				0A71991D293A066E00645643 /* Object.swift in Sources */,
-				0A71990D2939FF0900645643 /* Backend.swift in Sources */,
 				0A7198D82939FE6900645643 /* SceneDelegate.swift in Sources */,
-				0A71990F2939FF2100645643 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

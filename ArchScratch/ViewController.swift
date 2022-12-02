@@ -9,55 +9,75 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var id: SafeID!
-    var store: Store!
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        // subscribe for receiving safe change events
-        // invalidate the view (reload)
-    }
-
-    deinit {
-        // unsubscribe from receiving events
-    }
-
-    // on receiving event: enqueue it, invalidate the view.
-
-    // on reloading (invalidation) of view:
-        // dequeue and de-duplicate event(s)
-        // query (pull) data from safe model
-        // load data into display view
-
-    func reload() {
-        let result = store.get(id)
-        switch result {
-        case .some(let record) where record.state == .exists: // <- this hints that 'not found' should be a state, too.
-            // display the values
-            break
-
-        case .none:
-            // display not found state
-            break
-
-        case .some(let record) where record.state == .loading:
-            // display loading state
-            break
-
-        case .some(let record) where record.state == .deleted:
-            // display deleted state
-            break
-
-        case .some(let record) where record.state == .error:
-            // display error state
-            break
-
-        default:
-            // no-op
-            break
-        }
     }
 
 }
 
-// view must have a queue for enqueuing notification messages and then processing them.
+// ----
+
+// Data Schema:
+
+// Any Object
+    // ID       object_id
+    // status   enum // none | ok | error | deleted
+    // updated  timestamp
+    // hash     data (?)
+
+
+// Safe List - user's collection of safes |ID /safes/{id}
+    // id       string   // id of the list: global
+    // items    safe_id[]
+
+// Safe |ID /safe/{chain_id}/{address}
+    // chain_id     int     // id{1}
+    // address      address // id{2}
+    // owners       address[]
+    // threshold    int
+    // nonce        int // executed transaction count
+    // modules      address[]
+    // fallback     address
+    // guard        address
+    // impl         address // on the same chain
+    // version      string // semantic version string of the implementation
+
+// Safe Address Registry |ID /known-addresses
+    // Record |ID /record/{chain_id}/{address}
+        // chain_id     int     // id{1}
+        // address      address // id{2}
+        // name         string
+        // logo         string // uri
+
+// Chain Registry |ID /chains
+    // Chain |ID /chain/{id}
+        // id       int // id
+        // short    string // short name
+        // name     string // long name
+
+// -----
+
+// UI System:
+// Medium <-> [Q] View <┬> Model <------> Cache <-> [Q] Storage
+//   ↑                  |                  ↑ |
+//   |                  └─> [Q] Backend ---┘ |
+//   └---<--------------<-----------------<--┘
+
+// Memory
+    // get by id
+    // update by id
+    // delete by id
+
+// Backend
+    // exec command
+
+// Medium
+    // subscribe
+    // unsubscribe
+    // notify
+    // handle
+
+// Storage
+    // get
+    // update
+    // delete
