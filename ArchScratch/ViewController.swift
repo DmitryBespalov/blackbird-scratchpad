@@ -57,27 +57,33 @@ class ViewController: UIViewController {
 
 // -----
 
-// UI System:
-// Medium <-> [Q] View <┬> Model <------> Cache <-> [Q] Storage
-//   ↑                  |                  ↑ |
-//   |                  └─> [Q] Backend ---┘ |
-//   └---<--------------<-----------------<--┘
+// UI System Message Flow:
+// Medium[Q] <-> View <-> Model <----------> Memory <-> [Q] Storage
+//   ↑                      |                  ↑ |
+//   |                      └─> [Q] Backend ---┘ |
+//   └---<--------------<-----------------<------┘
+//
+//  Clock | Hasher
 
-// Memory
+// Memory/Cache
+    // singleton
     // get by id
     // update by id
     // delete by id
 
 // Backend
+    // singleton
     // exec command
 
 // Medium
+    // singleton
     // subscribe
     // unsubscribe
     // notify
     // handle
 
 // Storage
+    // singleton
     // get
     // update
     // delete
