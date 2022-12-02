@@ -17,6 +17,7 @@
 		0A7198F02939FE6900645643 /* ArchScratchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198EF2939FE6900645643 /* ArchScratchTests.swift */; };
 		0A7198FA2939FE6900645643 /* ArchScratchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198F92939FE6900645643 /* ArchScratchUITests.swift */; };
 		0A7198FC2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7198FB2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift */; };
+		0A719921293A400C00645643 /* SafeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A719920293A400C00645643 /* SafeListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0A7198F52939FE6900645643 /* ArchScratchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchScratchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A7198F92939FE6900645643 /* ArchScratchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchScratchUITests.swift; sourceTree = "<group>"; };
 		0A7198FB2939FE6900645643 /* ArchScratchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchScratchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0A719920293A400C00645643 /* SafeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				0A7198D52939FE6900645643 /* AppDelegate.swift */,
 				0A7198D72939FE6900645643 /* SceneDelegate.swift */,
 				0A7198D92939FE6900645643 /* ViewController.swift */,
+				0A719920293A400C00645643 /* SafeListVC.swift */,
 				0A7198DB2939FE6900645643 /* Main.storyboard */,
 				0A7198E12939FE6900645643 /* Assets.xcassets */,
 				0A7198E32939FE6900645643 /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			files = (
 				0A7198DA2939FE6900645643 /* ViewController.swift in Sources */,
 				0A7198D62939FE6900645643 /* AppDelegate.swift in Sources */,
+				0A719921293A400C00645643 /* SafeListVC.swift in Sources */,
 				0A7198E02939FE6900645643 /* ArchScratch.xcdatamodeld in Sources */,
 				0A7198D82939FE6900645643 /* SceneDelegate.swift in Sources */,
 			);

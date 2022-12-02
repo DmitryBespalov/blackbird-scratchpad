@@ -13,6 +13,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        let vc = SafeListVC()
+        vc.id = SafeListID(value: "/safes/global")
+        let nav = UINavigationController(rootViewController: vc)
+
+        present(nav, animated: true)
+    }
+
 }
 
 // ----
