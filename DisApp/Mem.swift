@@ -12,20 +12,20 @@ class Mem {
 
     private init() {}
 
-    var subs: [ResID: [Pub]] = [:]
+    var subs: [ResID: [Sub]] = [:]
 
-    func sub(_ id: ResID, _ pub: Pub) {
+    func sub(_ id: ResID, _ s: Sub) {
         // FIXME: duplicate subscriptions
-        var pubs = subs[id] ?? []
-        pubs.append(pub)
-        subs[id] = pubs
+        var list = subs[id] ?? []
+        list.append(s)
+        subs[id] = list
     }
 
-    func unsub(_ pub: Pub) {
+    func unsub(_ pub: Sub) {
         for id in subs.keys {
-            var pubs = subs[id]
-            pubs?.removeAll(where: { $0 === pub })
-            subs[id] = pubs
+            var list = subs[id]
+            list?.removeAll(where: { $0 === pub })
+            subs[id] = list
         }
     }
 
@@ -44,8 +44,8 @@ class Mem {
     func update(_ id: ResID, _ value: Any) {
         cache[id] = value
         
-        for pub in subs[id] ?? [] {
-            pub.update(id)
+        for s in subs[id] ?? [] {
+            s.update(id)
         }
     }
 
@@ -57,6 +57,6 @@ enum MemErr: Error {
     case netDecoding(err: Error, data: Data)
 }
 
-protocol Pub: AnyObject {
+protocol Sub: AnyObject {
     func update(_ id: ResID)
 }

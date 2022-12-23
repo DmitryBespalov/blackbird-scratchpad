@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GuardianListTableViewController: UITableViewController, Pub {
+class GuardianListTableViewController: UITableViewController, Sub {
     let id = GuardiansListID.shared
     var list: GuardiansList?
 

@@ -11,9 +11,10 @@ class GuardianTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var ens: UILabel!
     @IBOutlet weak var address: UILabel!
-    @IBOutlet weak var reason: UILabel!
+    @IBOutlet weak var reasonCaption: UILabel!
+    @IBOutlet weak var reason: UITextView!
     @IBOutlet weak var contributionCaption: UILabel!
-    @IBOutlet weak var contribution: UILabel!
+    @IBOutlet weak var contribution: UITextView!
 
     var item: Guardian? {
         didSet {
@@ -34,8 +35,11 @@ class GuardianTableViewCell: UITableViewCell {
 
     func updateContent() {
         guard let item = item else {
-            for label in [name, ens, address, reason, contributionCaption, contribution] {
+            for label in [name, ens, address, reasonCaption, contributionCaption] {
                 label?.text = nil
+            }
+            for textView in [reason, contribution] {
+                textView?.text = nil
             }
             return
         }
@@ -43,8 +47,11 @@ class GuardianTableViewCell: UITableViewCell {
         name.text = item.name
         ens.text = item.ens
         address.text = item.address
+        reasonCaption.text = "Reason to be a delegate"
         reason.text = item.reason
+        contributionCaption.text = "Contributions"
         contribution.text = item.contribution
+        contribution.sizeToFit()
     }
     
 }
