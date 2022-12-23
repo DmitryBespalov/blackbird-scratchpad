@@ -17,6 +17,10 @@
 		0AE0F2D92954BA6E0044CAF2 /* DisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2D82954BA6E0044CAF2 /* DisAppTests.swift */; };
 		0AE0F2E32954BA6E0044CAF2 /* DisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2E22954BA6E0044CAF2 /* DisAppUITests.swift */; };
 		0AE0F2E52954BA6E0044CAF2 /* DisAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2E42954BA6E0044CAF2 /* DisAppUITestsLaunchTests.swift */; };
+		0AE0F2F22954BA840044CAF2 /* Net.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2F12954BA840044CAF2 /* Net.swift */; };
+		0AE0F2F42954BA880044CAF2 /* Mem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2F32954BA880044CAF2 /* Mem.swift */; };
+		0AE0F2F62954BA8E0044CAF2 /* Disk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2F52954BA8E0044CAF2 /* Disk.swift */; };
+		0AE0F2F82954BB0A0044CAF2 /* GuardiansList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0F2F72954BB0A0044CAF2 /* GuardiansList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		0AE0F2DE2954BA6E0044CAF2 /* DisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE0F2E22954BA6E0044CAF2 /* DisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisAppUITests.swift; sourceTree = "<group>"; };
 		0AE0F2E42954BA6E0044CAF2 /* DisAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0AE0F2F12954BA840044CAF2 /* Net.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Net.swift; sourceTree = "<group>"; };
+		0AE0F2F32954BA880044CAF2 /* Mem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mem.swift; sourceTree = "<group>"; };
+		0AE0F2F52954BA8E0044CAF2 /* Disk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disk.swift; sourceTree = "<group>"; };
+		0AE0F2F72954BB0A0044CAF2 /* GuardiansList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardiansList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,10 @@
 				0AE0F2BE2954BA6D0044CAF2 /* AppDelegate.swift */,
 				0AE0F2C02954BA6D0044CAF2 /* SceneDelegate.swift */,
 				0AE0F2C22954BA6D0044CAF2 /* ViewController.swift */,
+				0AE0F2F12954BA840044CAF2 /* Net.swift */,
+				0AE0F2F32954BA880044CAF2 /* Mem.swift */,
+				0AE0F2F52954BA8E0044CAF2 /* Disk.swift */,
+				0AE0F2F72954BB0A0044CAF2 /* GuardiansList.swift */,
 				0AE0F2C42954BA6D0044CAF2 /* Main.storyboard */,
 				0AE0F2CA2954BA6E0044CAF2 /* Assets.xcassets */,
 				0AE0F2CC2954BA6E0044CAF2 /* LaunchScreen.storyboard */,
@@ -261,7 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AE0F2F82954BB0A0044CAF2 /* GuardiansList.swift in Sources */,
+				0AE0F2F62954BA8E0044CAF2 /* Disk.swift in Sources */,
 				0AE0F2C92954BA6D0044CAF2 /* DisApp.xcdatamodeld in Sources */,
+				0AE0F2F42954BA880044CAF2 /* Mem.swift in Sources */,
+				0AE0F2F22954BA840044CAF2 /* Net.swift in Sources */,
 				0AE0F2C32954BA6D0044CAF2 /* ViewController.swift in Sources */,
 				0AE0F2BF2954BA6D0044CAF2 /* AppDelegate.swift in Sources */,
 				0AE0F2C12954BA6D0044CAF2 /* SceneDelegate.swift in Sources */,
