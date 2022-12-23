@@ -8,9 +8,9 @@
 import UIKit
 
 class GuardianTableViewCell: UITableViewCell {
-    @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var ens: UILabel!
-    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var name: UITextView!
+    @IBOutlet weak var ens: UITextView!
+    @IBOutlet weak var address: UITextView!
     @IBOutlet weak var reasonCaption: UILabel!
     @IBOutlet weak var reason: UITextView!
     @IBOutlet weak var contributionCaption: UILabel!
@@ -35,10 +35,10 @@ class GuardianTableViewCell: UITableViewCell {
 
     func updateContent() {
         guard let item = item else {
-            for label in [name, ens, address, reasonCaption, contributionCaption] {
+            for label in [reasonCaption, contributionCaption] {
                 label?.text = nil
             }
-            for textView in [reason, contribution] {
+            for textView in [name, ens, address, reason, contribution] {
                 textView?.text = nil
             }
             return
@@ -51,7 +51,11 @@ class GuardianTableViewCell: UITableViewCell {
         reason.text = item.reason
         contributionCaption.text = "Contributions"
         contribution.text = item.contribution
-        contribution.sizeToFit()
+
+        for textView in [name, ens, address, reason, contribution] {
+            textView!.isHidden = textView!.text == nil || textView?.text?.isEmpty == true
+            textView!.sizeToFit()
+        }
     }
     
 }
