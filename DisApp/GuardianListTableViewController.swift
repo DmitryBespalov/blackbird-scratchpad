@@ -1,15 +1,15 @@
 //
-//  ViewController.swift
+//  GuardianListTableViewController.swift
 //  DisApp
 //
-//  Created by Dmitry Bespalov on 22.12.22.
+//  Created by Dmitry Bespalov on 23.12.22.
 //
 
 import UIKit
 
-class ViewController: UIViewController, Pub {
-
-    let id = GuardiansListID()
+class GuardianListTableViewController: UITableViewController, Pub {
+    let id = GuardiansListID.shared
+    var list: GuardiansList?
 
     var queue: OperationQueue!
 
@@ -19,6 +19,10 @@ class ViewController: UIViewController, Pub {
         queue.maxConcurrentOperationCount = 1
         queue.name = "vc"
         queue.underlyingQueue = .main
+
+        tableView.register(UINib(nibName: "GuardianTableViewCell", bundle: .main), forCellReuseIdentifier: "Guardian")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 100
 
         Mem.shared.sub(id, self)
 
@@ -61,9 +65,24 @@ class ViewController: UIViewController, Pub {
         }
 
         // display the result
-        let list = result as! GuardiansList
-        print("ok!", list)
+        list = (result as! GuardiansList)
+        tableView.reloadData()
+    }
+
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        list?.items.count ?? 0
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let item = list?.items[indexPath.row] else {
+            return UITableViewCell()
+        }
+
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Guardian", for: indexPath)
+            as! GuardianTableViewCell
+        cell.item = item
+        return cell
     }
 
 }
-

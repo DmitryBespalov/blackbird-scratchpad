@@ -18,11 +18,25 @@ class ResID: Hashable {
 }
 
 class GuardiansListID: ResID {
+    static let shared = GuardiansListID()
 
+    private override init() {}
 }
 
-struct GuardiansList: Codable {
+class GuardiansList: Codable {
+    internal init(items: [Guardian] = []) {
+        self.items = items
+    }
+
+    required init(from decoder: Decoder) throws {
+        items = try [Guardian](from: decoder)
+    }
+
     var items: [Guardian]
+
+    func encode(to encoder: Encoder) throws {
+        try items.encode(to: encoder)
+    }
 }
 
 struct Guardian: Codable {
@@ -34,12 +48,3 @@ struct Guardian: Codable {
     var contribution: String
 }
 
-extension GuardiansList {
-    init(from decoder: Decoder) throws {
-        items = try [Guardian](from: decoder)
-    }
-
-    func encode(to encoder: Encoder) throws {
-        try items.encode(to: encoder)
-    }
-}
